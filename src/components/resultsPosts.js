@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
+import Post from './post';
 
 class ResultsPosts extends Component {
 
@@ -10,12 +11,13 @@ class ResultsPosts extends Component {
         })
         return posts;
     }
+
     render() {
         return (
-            <div className="resutls=posts">
+            <div className="results-posts">
                 <div className="results-posts__wrapper">
                     <ul className="results-posts__posts">
-                        {this.renderPosts}
+                        {this.renderPosts()}
                     </ul>
                 </div>
             </div>
@@ -24,7 +26,7 @@ class ResultsPosts extends Component {
 }
 
 function mapStateToProps(state) {
-    return {
+    return { 
         posts: state.posts.resultsPosts
     }
 }

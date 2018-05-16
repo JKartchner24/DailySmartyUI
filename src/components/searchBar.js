@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Field, reduxForm} from 'redux-form';
 
-import { withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class SearchBar extends Component {
 
@@ -17,7 +17,7 @@ class SearchBar extends Component {
 
         const { handleSubmit } = this.props;
 
-        return( 
+        return (
             <form className="search-bar" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                 <Field name="query" component={this.renderInput}/>
             </form>
