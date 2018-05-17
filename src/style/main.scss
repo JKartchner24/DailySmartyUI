@@ -16,8 +16,15 @@ body {
     width: 60vw;
     display: grid;
     align-content: space-around;
-    justify-content: center;
+    justify-content: stretch;
     // grid-template-rows: 1fr 2fr 1fr;
+}
+
+.logo-main,
+.recent-posts
+{
+    display: grid;
+    justify-content: center;
 }
 
 $color-gray-one: #666666;
